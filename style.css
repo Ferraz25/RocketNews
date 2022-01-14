@@ -10,6 +10,7 @@
   padding: 0;
   font-family: 'Spartan', sans-serif;
   font-family: 'Work Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -78,25 +79,39 @@ body {
 .send input {
   width: 798px;
   height: 48px;
-
-  margin-left: 35px;
-  margin-top: 20px;
-
+  padding-left: 10px;
   outline: none;
-
   position: relative;
 }
 
-/*.send input::before {
+.send div {
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+.send div::before {
   content: '';
   width: 5px;
   height: 48px;
   background-color: green;
-
   position: absolute;
+
+  z-index: 10;
 }
 
-.send .image {
+.send div::after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  background-image: url('./assets/button.png');
+  position: absolute;
+
+  z-index: 10;
+  top: 452px;
+  right: 500px;
+}
+
+/*.send .image {
   height: 48px;
   width: 48px;
   background-color: var(--bg-button-color);
